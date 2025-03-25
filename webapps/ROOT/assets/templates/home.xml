@@ -18,19 +18,21 @@
           <h1 class="lp-h1">
             <i18n:text i18n:key="home-title"/>
           </h1>
+         <!-- 
           <h3 class="lp-h3">Institut Catholique de Paris, Institut Français d'Études Byzantines</h3>
           <div class="lp-h5-div text-left">
-          <h5 class=""><i18n:text i18n:key="home-editor">Édition des sceaux</i18n:text>: <a
+            <h5 class=""><i18n:text i18n:key="home-editor">Édition des sceaux</i18n:text>: <a
               href="https://www.orient-mediterranee.com/member/cheynet-jean/" target="_blank"
               >Jean-Claude Cheynet</a>, <a
               href="https://www.orient-mediterranee.com/member/prigent-vivien/" target="_blank"
               >Vivien Prigent</a>, <a
               href="https://www.orient-mediterranee.com/member/sopracasa-alessio/" target="_blank"
               >Alessio Sopracasa</a></h5>
-          <h5><i18n:text i18n:key="home-digi-editor">Édition numérique</i18n:text>: <a
+            <h5><i18n:text i18n:key="home-digi-editor">Édition numérique</i18n:text>: <a
               href="https://www.orient-mediterranee.com/member/sopracasa-alessio/" target="_blank"
               >Alessio Sopracasa</a></h5>
           </div>
+          -->
         </div>
       </div>
     </kiln:block>
