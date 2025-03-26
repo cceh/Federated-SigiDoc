@@ -100,9 +100,15 @@
                   <xsl:otherwise><xsl:value-of select="substring-after($titles/title[contains(.,'en|')][1],'|')"/></xsl:otherwise>
                 </xsl:choose>
               </xsl:variable>
+              <xsl:if test="normalize-space($title) != ''">
               <xsl:value-of select="$title"/>
+              </xsl:if>
             </xsl:when>
-            <xsl:otherwise>  <xsl:value-of select="."/></xsl:otherwise>
+            <xsl:otherwise>  
+              <xsl:if test="normalize-space(.) != ''">
+              <xsl:value-of select="."/>
+              </xsl:if>
+            </xsl:otherwise>
           </xsl:choose>
           
 
@@ -145,6 +151,7 @@
           <link><xsl:value-of select="tokenize(.,'_')[2]"/></link>
         </xsl:variable>
         <ul style="margin-bottom: 5px;">
+          <xsl:if test="$tokens/name/text() != ''">
           <li>
           <span><xsl:value-of select="$tokens/name/text()"/></span>
           <a target="_blank">
@@ -154,16 +161,33 @@
             <xsl:value-of select="$tokens/text/text()"/>
           </a>
           </li>
+          </xsl:if>
         </ul>
       </xsl:for-each>
     </td>
   </xsl:template>
   
   <xsl:template match="arr[@name='index_instance_location']">
+    <xsl:variable name="data" select="."/>
+    <xsl:variable name="collections">
+      <xsl:for-each select="./str"> 
+        <name>
+          <xsl:value-of select="tokenize(.,'#')[6]"/>
+        </name>
+      </xsl:for-each>
+    </xsl:variable>
     <td>
-      <ul class="index-instances inline-list">
-        <xsl:apply-templates select="str" />
-      </ul>
+        <xsl:for-each select="distinct-values($collections/name)">        
+          <xsl:variable name="colname" select="."/>
+          <xsl:value-of select="concat($colname, ': ')"/>
+          <ul class="index-instances inline-list">  
+          <xsl:for-each select="distinct-values($data/str[contains(.,$colname)])">
+            <xsl:variable name="content" select="."/>
+            <xsl:apply-templates select="$data/str[./text() = $content][1]"/>
+          </xsl:for-each>
+          </ul>
+        </xsl:for-each>
+
     </td>
   </xsl:template>
   
@@ -194,6 +218,7 @@
   </xsl:template>
 
   <xsl:template match="arr[@name='index_instance_location']/str">
+    
     <!-- This template must be defined in the calling XSLT (eg,
          indices-epidoc.xsl) since the format of the location data is
          not universal. -->

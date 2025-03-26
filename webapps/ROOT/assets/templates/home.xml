@@ -15,9 +15,24 @@
     <kiln:block name="page-header">
       <div class="row">
         <div class="large-12 columns text-center">
-          <h1>
-            <i18n:text i18n:key="home-title"></i18n:text>
+          <h1 class="lp-h1">
+            <i18n:text i18n:key="home-title"/>
           </h1>
+         <!-- 
+          <h3 class="lp-h3">Institut Catholique de Paris, Institut Français d'Études Byzantines</h3>
+          <div class="lp-h5-div text-left">
+            <h5 class=""><i18n:text i18n:key="home-editor">Édition des sceaux</i18n:text>: <a
+              href="https://www.orient-mediterranee.com/member/cheynet-jean/" target="_blank"
+              >Jean-Claude Cheynet</a>, <a
+              href="https://www.orient-mediterranee.com/member/prigent-vivien/" target="_blank"
+              >Vivien Prigent</a>, <a
+              href="https://www.orient-mediterranee.com/member/sopracasa-alessio/" target="_blank"
+              >Alessio Sopracasa</a></h5>
+            <h5><i18n:text i18n:key="home-digi-editor">Édition numérique</i18n:text>: <a
+              href="https://www.orient-mediterranee.com/member/sopracasa-alessio/" target="_blank"
+              >Alessio Sopracasa</a></h5>
+          </div>
+          -->
         </div>
       </div>
     </kiln:block>
@@ -26,7 +41,6 @@
       <main>
         <div class="row text-left">
           <div class="large-12 columns">
-
           <div class="landing-page-container">
             <a href="{kiln:url-for-match('local-about', ($language, ()), 0)}" target="_blank" class="landing-panel">
             <img class="panel-icon" src="/assets/google-icons/info_24dp_45658B_FILL0_wght400_GRAD0_opsz24.svg"/>
@@ -60,6 +74,7 @@
             </div>
           </div> 
             <div class="panel radius">
+
               <h4>Mission Statement</h4>
               <!-- <div class="landing-img" id="site-title"></div> -->
               <p>Over 100,000 Byzantine seals are housed in a wide array of collections,
@@ -81,17 +96,16 @@
               <p>Get in touch with the DigiByzSeal project team.</p> <!--MAIL ODER WEBSITE-->
               <p>We will support you in exploring the most suitable option and guide you in preparing your data to meet the minimal participation standards.</p>
               <p>Our goal is to make contributing as easy and accessible as possible.</p>
+
             </div>
             <div class="row">
               <div class="large-12 columns">
                 <div class="panel radius">
                 <h4>License</h4>
-                  <!-- <p>The full bibliographical description of this publication: <strong>[to be changed by each project]</strong>,
-                    available at: <strong>[to be changed by each project]</strong>.</p> <p>This should be abbreviated to <strong>[to be changed by each project]</strong>.</p> -->
-                    <p>We recognise the importance of scholarly cataloguing in academic careers. The Portal does not claim authorship of individual records.
-                     Instead, it ensures that contributors retain full ownership and visibility over their data and that content responsibility lies with the data providers.</p>
-                  <p>GitHub repository available <a href="https://github.com/SigiDoc"
-                    target="_blank">https://github.com/SigiDoc</a>.</p>
+                  <p>The full bibliographical description of this publication: <strong>[to be changed by each project]</strong>,
+                    available at: <a href="https://sigidoc.cceh.uni-koeln.de/en/">https://sigidoc.cceh.uni-koeln.de/en/</a>.</p> <p>This should be abbreviated to <strong>[to be changed by each project]</strong>.</p>
+                  <p>GitHub repository available <a href="https://github.com/SigiDoc/EFES-SigiDoc"
+                      target="_blank">https://github.com/SigiDoc/EFES-SigiDoc</a>.</p>
                   <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
                       <img alt="Creative Commons License" style="border-width:0"
                         src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/>

@@ -41,10 +41,23 @@
       <xsl:text>-display-html</xsl:text>
     </xsl:variable>
     <li>
-      <a href="{kiln:url-for-match($match_id, ($language, $location_parts[2]), 0)}">
+      <xsl:variable name="url">
+      <xsl:choose>
+        <xsl:when test="$location_parts[6] = 'IFEB'"><xsl:value-of select="concat('https://ifeb.sigidoc.huma-num.fr/fr/seals/',$location_parts[2],'.html')"/></xsl:when> 
+        <xsl:when test="$location_parts[6] = 'Yavuz Tatış collection'"><xsl:value-of select="concat('https://tatis.sigidoc.huma-num.fr/fr/seals/',$location_parts[2],'.html')"/></xsl:when>
+        <xsl:when test="$location_parts[6] = 'Henri Seyrig Collection'"><xsl:value-of select="concat('https://seyrig.sigidoc.huma-num.fr/fr/seals/',$location_parts[2],'.html')"/></xsl:when>
+        <xsl:when test="$location_parts[6] = 'Zacos BnF'"><xsl:value-of select="concat('https://zacos.sigidoc.huma-num.fr/fr/seals/',$location_parts[2],'.html')"/></xsl:when>
+        <xsl:when test="$location_parts[6] = 'Robert Feind Collection'"><xsl:value-of select="concat('https://feind.sigidoc.cceh.uni-koeln.de/de/seals/',$location_parts[2],'.html')"/></xsl:when>
+        <xsl:otherwise><xsl:value-of select="kiln:url-for-match($match_id, ($language, $location_parts[2]), 0)"/></xsl:otherwise>
+      </xsl:choose>
+      </xsl:variable>
+      <a target="_blank" href="{$url}">
         <!--<xsl:if test="$location_parts[5] = '1'">
           <xsl:text>[</xsl:text>
         </xsl:if>-->
+        <xsl:choose>
+          <xsl:when test="count($location_parts) &lt; 5">
+            
         <span class="index-instance-file">
           <xsl:value-of select="$location_parts[2]" />
         </span>
@@ -58,6 +71,11 @@
         <span class="index-instance-line">
           <xsl:value-of select="$location_parts[4]" />
         </span>
+          </xsl:when>
+          <xsl:otherwise>
+            <span><xsl:value-of select="$location_parts[7]"/></span>
+          </xsl:otherwise>
+        </xsl:choose>
         <!--<xsl:if test="$location_parts[5] = '1'">
           <xsl:text>]</xsl:text>
         </xsl:if>-->
