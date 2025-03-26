@@ -34,7 +34,7 @@
             <div class="row">
                 <!--ABOUT INTRO-->
                 <p>
-                The CSÆB is a federated search Portal for Byzantine seals, providing access to all collections encoded using the <a target="_blank" href="https://github.com/SigiDoc/Guidelines/wiki">SigiDoc data model</a> through a single unified interface.
+                The SigiDoc Portal is a federated search Portal for Byzantine seals, providing access to all collections encoded using the <a target="_blank" href="https://github.com/SigiDoc/Guidelines/wiki">SigiDoc data model</a> through a single unified interface.
                  Rather than merging everything into one large corpus, the Portal allows individual collections to remain autonomous while being interoperable through the shared encoding standard.
                 To support this approach, the <i>DigiByzSeal</i> team developed an infrastructure based on GitHub repositories:
                 </p>
@@ -59,13 +59,13 @@
                 </p>
                 <hr></hr> <!--TRENNSTRICH-->
                 <!--WHO IS IT FOR?-->
-                <h4>Who is CSÆB for?</h4>
+                <h4>Who is the SigiDoc Portal for?</h4>
                 <p>
                 Are you a researcher working on the publication of Byzantine seals?
                 A private collector in possession of valuable and unique pieces that remain largely unknown to the scholarly community?
                 An institution that already maintains a catalogue of seals, but wants to make them more visible?
                 </p>
-                <p>Then CSÆB is likely for you.</p>
+                <p>Then the SigiDoc Portal is likely for you.</p>
                 <hr></hr> <!--TRENNSTRICH-->
                 <!--WHAT ARE THE BENEFITS-->
                 <h4>What are the benefits of participating?</h4>
@@ -76,7 +76,7 @@
                 This increased accessibility does not come at the cost of your rights. Your authorship and contributions—whether personal or institutional—will always remain clearly credited and protected.
                 </p>
                 <p>
-                By joining CSÆB, you contribute to a critical mass of searchable seals, enabling multicorpus-based research that can enhance your own work and that of others.
+                By joining the SigiDoc Portal, you contribute to a critical mass of searchable seals, enabling multicorpus-based research that can enhance your own work and that of others.
                 </p>
                 <hr></hr> <!--TRENNSTRICH-->
                 <!--HOT TO PARTICIPATE-->
