@@ -299,9 +299,12 @@
     </field>
   </xsl:template>
   
-  <xsl:template match="//tei:div[@type='translation']//tei:p[@xml:lang='en']" mode="facet_translation">
+  <xsl:template match="//tei:div[@type='translation']//tei:p" mode="facet_translation">
     <field name="translation">
-      <xsl:value-of select="."/>
+      <xsl:for-each select=".">
+        <xsl:value-of select="concat(@xml:lang,'|',normalize-space(string-join(.,' ')))"/>
+      </xsl:for-each>
+      
     </field>
   </xsl:template>
   
@@ -313,6 +316,18 @@
   
   <xsl:template match="//tei:msDesc/tei:msIdentifier/tei:idno[@type='inv-nr-current']" mode="facet_inv">
     <field name="inv">
+      <xsl:value-of select="."/>
+    </field>
+  </xsl:template>
+  
+  <xsl:template match="//tei:surface[@n='r']//tei:graphic[@type='photo']/@url" mode="facet_imgr">
+    <field name="imgr">
+      <xsl:value-of select="."/>
+    </field>
+  </xsl:template>
+  
+  <xsl:template match="//tei:surface[@n='v']//tei:graphic[@type='photo']/@url" mode="facet_imgv">
+    <field name="imgv">
       <xsl:value-of select="."/>
     </field>
   </xsl:template>
@@ -357,6 +372,9 @@
     <xsl:call-template name="field_translation"/>
     <xsl:call-template name="field_origDate"/>
     <xsl:call-template name="field_inv"/>
+    
+    <xsl:call-template name="field_imgr"/>
+    <xsl:call-template name="field_imgv"/>
   </xsl:template>
   
   <xsl:template name="field_sigidoc_id_number">
@@ -461,7 +479,7 @@
   
   <xsl:template name="field_translation">
     <xsl:apply-templates mode="facet_translation"
-      select="//tei:div[@type='translation']//tei:p[@xml:lang='en']"/>
+      select="//tei:div[@type='translation']"/>
   </xsl:template>
   
   <xsl:template name="field_origDate">
@@ -474,5 +492,12 @@
       select="//tei:msDesc/tei:msIdentifier/tei:idno[@type='inv-nr-current']"/>
   </xsl:template>
   
-  
+  <xsl:template name="field_imgr">
+    <xsl:apply-templates 
+      select="//tei:surface[@n='r']//tei:graphic[@type='photo']/@url" mode="facet_imgr"/>
+  </xsl:template>
+  <xsl:template name="field_imgv">
+    <xsl:apply-templates 
+      select="//tei:surface[@n='v']//tei:graphic[@type='photo']/@url" mode="facet_imgv"/>
+  </xsl:template>
 </xsl:stylesheet>
