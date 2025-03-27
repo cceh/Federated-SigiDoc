@@ -219,7 +219,7 @@
   -->
   <xsl:template match="tei:collection/tei:rs[@xml:lang = 'en']" mode="facet_collection">
     <field name="collection">
-      <xsl:value-of select="."/>
+      <xsl:value-of select="normalize-space(string-join(.,' '))"/>
     </field>
   </xsl:template>
   <xsl:template match="tei:material/tei:seg[@xml:lang = 'en']" mode="facet_material">
