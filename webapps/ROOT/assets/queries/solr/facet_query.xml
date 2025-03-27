@@ -8,8 +8,8 @@
   <facet.field>material</facet.field>
   <facet.field>language</facet.field>
   <!--<facet.field>holding_entity</facet.field>--> <!--MF deleted it in Nov 2024, to be implemented in the portal. Markup is still there-->
-  <!--<facet.field>collection</facet.field>--> <!--MF deleted it in Nov 2024, to be implemented in the portal. Markup is still there-->
-  <facet.field>personal_names</facet.field>
+  <facet.field>collection</facet.field>
+    <facet.field>personal_names</facet.field>
   <facet.field>family_names</facet.field>
   <facet.field>gender</facet.field>
   <facet.field>milieu</facet.field>
