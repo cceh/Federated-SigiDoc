@@ -1,6 +1,10 @@
-FROM eclipse-temurin:8u442-b06-jdk
+FROM eclipse-temurin:8-jdk-alpine
 
 COPY . /sigidoc
 WORKDIR /sigidoc
 
-CMD ["./build.sh"]
+ENV ANT_OPTS=" \
+  -Dinfo.aduna.platform.appdata.basedir=./webapps/openrdf-sesame/app_dir/ \
+  -Dorg.eclipse.jetty.LEVEL=WARN"
+
+CMD ["sw/ant/bin/ant", "-f", "local.build.xml"]

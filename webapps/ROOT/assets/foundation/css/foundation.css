@@ -2409,7 +2409,7 @@ label.error {
   width: 100%;
   position: relative;
   display: block;
-  margin-bottom: 1.25em; }
+  margin-bottom: 0.9em; }
   [data-section='tabs']:not([data-section-resized]):not([data-section-small-style]), .section-container.tabs:not([data-section-resized]):not([data-section-small-style]) {
     visibility: hidden; }
   [data-section='tabs'] > section > [data-section-title], [data-section='tabs'] > section > .title, [data-section='tabs'] > .section > [data-section-title], [data-section='tabs'] > .section > .title, [data-section='tabs'] > [data-section-region] > [data-section-title], [data-section='tabs'] > [data-section-region] > .title, .section-container.tabs > section > [data-section-title], .section-container.tabs > section > .title, .section-container.tabs > .section > [data-section-title], .section-container.tabs > .section > .title, .section-container.tabs > [data-section-region] > [data-section-title], .section-container.tabs > [data-section-region] > .title {

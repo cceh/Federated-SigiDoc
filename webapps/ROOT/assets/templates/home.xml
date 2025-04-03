@@ -41,7 +41,7 @@
       <main>
         <div class="row text-left">
           <div class="large-12 columns">
-          <div class="landing-page-container">
+          <!-- <div class="landing-page-container">
             <a href="{kiln:url-for-match('local-about', ($language, ()), 0)}" target="_blank" class="landing-panel">
             <img class="panel-icon" src="/assets/google-icons/info_24dp_45658B_FILL0_wght400_GRAD0_opsz24.svg"/>
             <h3> About </h3>
@@ -72,7 +72,8 @@
               <h3> <xsl:value-of select="count(//doc)"></xsl:value-of></h3>
             <p>Objects in all collections</p>
             </div>
-          </div> 
+          </div>  -->
+          <img class="landing-img" src="/assets/images/seal.png"/>
             <div class="panel radius">
 
               <h4>Mission Statement</h4>

@@ -589,6 +589,7 @@
             mode="search-results"/>
         </div>
         <div class="large-8 columns">
+         
           <xsl:apply-templates select="/aggregation/response/result" mode="search-results"/>
         </div>
       </div>
