@@ -15,6 +15,7 @@
     <kiln:block name="page-header">
       <div class="row">
         <div class="large-12 columns text-center">
+          <h4 id="title-construction">This website is currently under construction. Some information may be incomplete, outdated, or subject to change. We appreciate your understanding and invite you to check back soon for updates.</h4>
           <h1 class="lp-h1">
             <i18n:text i18n:key="home-title"/>
           </h1>

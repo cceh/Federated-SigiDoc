@@ -161,6 +161,12 @@ ul.index-instances {
     margin-top: 20px;
 }
 
+#title-construction {
+    color: red !important;
+    border: 3px solid red;
+    padding: 8px;
+}
+
 .lp-h1 {
     margin-bottom: 0px !important;
 }
