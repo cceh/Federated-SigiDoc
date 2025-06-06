@@ -13,6 +13,15 @@
   </map:views>
 
   <map:pipelines>
+    
+    <!-- mount robots.txt -->
+    <map:pipeline id="robottxt">
+      <map:match id="robot-txt" pattern="robots.txt">
+        <map:read mim-type="text/json" src="../robots.txt"/>
+      </map:match>
+      
+    </map:pipeline>
+    
     <!-- Mount sub-sitemaps. -->
     <map:pipeline id="local-mount">
       <!-- Mount a sitemap for any admin URLs, such as editorial
