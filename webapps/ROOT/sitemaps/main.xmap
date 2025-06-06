@@ -74,9 +74,17 @@
         <map:read mime-type="text/json" src="../content/rti/{1}/info.json"/>
       </map:match>
       
+   
+      
  
     </map:pipeline>
     
+    <map:pipeline id="robottxt">
+      <map:match id="robot-txt" pattern="robots.txt">
+        <map:read mim-type="text/json" src="../robots.txt"/>
+      </map:match>
+      
+    </map:pipeline>
 
     <!-- Main display pipeline. -->
     <map:pipeline type="noncaching">
